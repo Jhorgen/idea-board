@@ -16,7 +16,7 @@ export class Ideas extends Component {
   }
 
     componentDidMount() {
-      axios.get('http://localhost:3001/api/v1/ideas.json')
+      axios.get('https://murmuring-shore-14390.herokuapp.com/api/v1/ideas')
       .then(response => {
         console.log(response);
         this.setState({ideas: response.data})
@@ -62,7 +62,8 @@ export class Ideas extends Component {
   }
 
   deleteIdea = (id) => {
-    axios.delete(`http://localhost:3001/api/v1/ideas/${id}`)
+    axios.delete(`https://murmuring-shore-14390.herokuapp.com/api/v1/ideas
+/${id}`)
     .then(response => {
       const ideaIndex = this.state.ideas.findIndex(x => x.id === id)
       const ideas = update(this.state.ideas, { $splice: [[ideaIndex, 1]]})

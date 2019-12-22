@@ -21,7 +21,8 @@ class IdeaForm extends Component {
     }
 
     axios.put(
-      `http://localhost:3001/api/v1/ideas/${this.props.idea.id}`,
+      `https://murmuring-shore-14390.herokuapp.com/api/v1/ideas/
+${this.props.idea.id}`,
     {
       idea: idea
     })
