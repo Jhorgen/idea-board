@@ -26,7 +26,7 @@ export class Ideas extends Component {
 
     addNewIdea() {
     axios.post(
-      'http://localhost:3001/api/v1/ideas',
+      'https://murmuring-shore-14390.herokuapp.com/api/v1/ideas',
       { idea:
         {
           title: '',
